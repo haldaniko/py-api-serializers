@@ -12,7 +12,7 @@ from cinema.models import (CinemaHall,
 class CinemaHallSerializer(serializers.ModelSerializer):
     class Meta:
         model = CinemaHall
-        fields = ("name", "rows", "seats_in_row")
+        fields = ("name", "rows", "seats_in_row",)
 
 
 class GenreSerializer(serializers.ModelSerializer):
@@ -30,22 +30,22 @@ class ActorSerializer(serializers.ModelSerializer):
 class MovieSerializer(serializers.ModelSerializer):
     class Meta:
         model = Movie
-        fields = ("show_time", "movie", "cinema_hall")
+        fields = ("title", "description", "duration", "genres", "actors",)
 
 
 class MovieSessionSerializer(serializers.ModelSerializer):
     class Meta:
         model = MovieSession
-        fields = ("show_time", "movie", "cinema_hall")
+        fields = ("show_time", "movie", "cinema_hall",)
 
 
 class OrderSerializer(serializers.ModelSerializer):
     class Meta:
         model = Order
-        fields = ("created_at", "user")
+        fields = ("created_at", "user",)
 
 
 class TicketSerializer(serializers.ModelSerializer):
     class Meta:
         model = Ticket
-        fields = ("movie_session", "order", "row", "seat")
+        fields = ("movie_session", "order", "row", "seat",)
