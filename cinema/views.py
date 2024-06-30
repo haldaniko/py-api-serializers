@@ -1,24 +1,29 @@
 from django.db.models import Prefetch
 from rest_framework import viewsets
 
-from cinema.models import (CinemaHall,
-                           Genre,
-                           Actor,
-                           Movie,
-                           MovieSession,
-                           Order,
-                           Ticket)
-from cinema.serializers import (CinemaHallSerializer,
-                                GenreSerializer,
-                                ActorSerializer,
-                                MovieSerializer,
-                                MovieListSerializer,
-                                MovieRetrieveSerializer,
-                                MovieSessionSerializer,
-                                MovieSessionListSerializer,
-                                MovieSessionRetrieveSerializer,
-                                OrderSerializer,
-                                TicketSerializer, )
+from cinema.models import (
+    CinemaHall,
+    Genre,
+    Actor,
+    Movie,
+    MovieSession,
+    Order,
+    Ticket
+)
+
+from cinema.serializers import (
+    CinemaHallSerializer,
+    GenreSerializer,
+    ActorSerializer,
+    MovieSerializer,
+    MovieListSerializer,
+    MovieRetrieveSerializer,
+    MovieSessionSerializer,
+    MovieSessionListSerializer,
+    MovieSessionRetrieveSerializer,
+    OrderSerializer,
+    TicketSerializer
+)
 
 
 class CinemaHallViewSet(viewsets.ModelViewSet):
